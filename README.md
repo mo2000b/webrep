@@ -27,6 +27,7 @@ Logo requirements:
 
 ## Deployment Instructions
 
+### For Netlify
 1. Verify all changes are committed.
 2. On Netlify, link your repository.
 3. Configure the build with:
@@ -36,3 +37,11 @@ Logo requirements:
 4. Set the following environment variables on Netlify:
    - VITE_SUPABASE_URL
    - VITE_SUPABASE_ANON_KEY
+
+### Deploy via GitHub Pages
+1. Go to your GitHub repository Settings > Pages.
+2. Set the source to the "gh-pages" branch (not the main branch).  
+   (This ensures only the built website in project4/dist is served, not the root README.)
+3. The GitHub Actions workflow at `.github/workflows/deploy.yml` will build your project from `project4`
+   and publish the contents of `project4/dist` to the "gh-pages" branch.
+4. Visit https://<your-github-username>.github.io/<repository-name>/ to view your site.
