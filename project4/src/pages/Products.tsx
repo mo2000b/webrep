@@ -62,7 +62,12 @@ export default function Products() {
                 <p className="text-gray-600 mt-2 line-clamp-2">{product.description}</p>
                 <div className="mt-4 flex flex-col items-center space-y-2">
                   <img 
-                    src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(product.id.toString())}&size=100x100`}
+                    src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(JSON.stringify({
+                      id: product.id,
+                      name: product.name,
+                      quantity: product.quantity,
+                      details: product.description
+                    }))}&size=100x100`}
                     alt="QR Code"
                     className="mt-2"
                   />
@@ -97,7 +102,12 @@ export default function Products() {
                     />
                     <div className="mt-6 flex justify-center">
                       <img 
-                        src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(selectedProduct.id.toString())}&size=150x150`}
+                        src={`https://api.qrserver.com/v1/create-qr-code/?data=${encodeURIComponent(JSON.stringify({
+                          id: selectedProduct.id,
+                          name: selectedProduct.name,
+                          quantity: selectedProduct.quantity,
+                          details: selectedProduct.description
+                        }))}&size=150x150`}
                         alt="QR Code"
                       />
                     </div>

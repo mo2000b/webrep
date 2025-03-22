@@ -38,6 +38,22 @@ Logo requirements:
    - VITE_SUPABASE_URL
    - VITE_SUPABASE_ANON_KEY
 
+### For Netlify - Detailed Steps
+
+1. Log in to Netlify or create a free account at https://app.netlify.com/.
+2. From your Netlify dashboard, click on "New site from Git".
+3. Choose GitHub as your Git provider and authorize Netlify to access your repositories if you haven’t done so.
+4. Select the repository that contains your project (ensure it includes the project4 folder).
+5. In the "Build settings" section, configure:
+   - **Base directory:** project4
+   - **Build command:** npm run build
+   - **Publish directory:** dist
+6. Scroll down to the "Environment variables" section and add:
+   - VITE_SUPABASE_URL = your Supabase URL (same as in your .env file or netlify.toml)
+   - VITE_SUPABASE_ANON_KEY = your Supabase anon key
+7. Click "Deploy site" to start the build and deployment process.
+8. Once the deployment completes, Netlify will provide you with a live URL for testing your website.
+
 ### For GitHub Pages
 1. Create a GitHub repository and push all your code (including the project4 folder) to the main branch.
 2. Make sure the GitHub Actions workflow file at `.github/workflows/deploy.yml` is present. This workflow will:
