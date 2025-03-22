@@ -1,7 +1,8 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+base = "project4"
+command = "npm run build"
+publish = "dist"
 
 [context.production.environment]
-  VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5eXJnam10a2NnY3J3dWllanBoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIxMzkwNTIsImV4cCI6MjA1NzcxNTA1Mn0.7CNnZPw3FzMaDYf9kmyR8KqmWQxg76C2TlR-DbfjMIs"
-  VITE_SUPABASE_URL = "https://hyyrgjmtkcgcrwuiejph.supabase.co"  # Replace with your actual URL
+VITE_SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh5eXJnam10a2NnY3J3dWllanBoIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDIxMzkwNTIsImV4cCI6MjA1NzcxNTA1Mn0.7CNnZPw3FzMaDYf9kmyR8KqmWQxg76C2TlR-DbfjMIs"
+VITE_SUPABASE_URL = "https://hyyrgjmtkcgcrwuiejph.supabase.co"

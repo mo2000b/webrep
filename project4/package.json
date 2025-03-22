@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && if [ -d dist ]; then find dist -type f -name '*.crswap' -delete; fi",
     "lint": "eslint .",
     "preview": "vite preview"
   },

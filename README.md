@@ -38,6 +38,18 @@ Logo requirements:
    - VITE_SUPABASE_URL
    - VITE_SUPABASE_ANON_KEY
 
+### For GitHub Pages
+1. Create a GitHub repository and push all your code (including the project4 folder) to the main branch.
+2. Make sure the GitHub Actions workflow file at `.github/workflows/deploy.yml` is present. This workflow will:
+   - Checkout the code,
+   - Setup Node.js,
+   - Install dependencies,
+   - Build the project from the project4 folder,
+   - Deploy the contents of `project4/dist` to the `gh-pages` branch.
+3. In your repository, go to Settings > Pages. Set the source to the `gh-pages` branch.
+4. Your website will be available at:  
+   https://<your-github-username>.github.io/<repository-name>/
+
 ### Deploy via GitHub Pages
 1. Go to your GitHub repository Settings > Pages.
 2. Set the source to the "gh-pages" branch (not the main branch).  
@@ -45,3 +57,22 @@ Logo requirements:
 3. The GitHub Actions workflow at `.github/workflows/deploy.yml` will build your project from `project4`
    and publish the contents of `project4/dist` to the "gh-pages" branch.
 4. Visit https://<your-github-username>.github.io/<repository-name>/ to view your site.
+
+### Deploy via GitHub from the terminal
+
+If you're working in the current repository where the project4 folder resides, follow these steps from within the project4 directory:
+
+1. Open your terminal inside /workspaces/webrep/project4 (this is your repository root).
+2. If you haven't already, initialize your Git repository:
+   git init
+3. Add all files to the staging area and commit:
+   git add .
+   git commit -m "Initial commit"
+4. Add the remote repository (using your repository's URL; here we use your new link):
+   git remote add origin https://github.com/mo2000b/finalrep.git
+5. Push your changes to the main branch:
+   git push -u origin main
+6. Once pushed, the GitHub Actions workflow (defined at .github/workflows/deploy.yml) will build your project and deploy its output to the gh-pages branch.
+7. In your GitHub repository, navigate to Settings > Pages and ensure the source is set to the gh-pages branch.
+8. Your site will be available at:
+   https://<your-github-username>.github.io/<repository-name>/
