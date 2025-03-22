@@ -69,10 +69,12 @@ If you're working in the current repository where the project4 folder resides, f
    git add .
    git commit -m "Initial commit"
 4. Add the remote repository (using your repository's URL; here we use your new link):
-   git remote add origin https://github.com/mo2000b/finalrep.git
-5. Push your changes to the main branch:
+   git remote add origin https://github.com/mo2000b/webrep.git
+5. Pull any changes from the remote branch (to avoid non-fast-forward errors):
+   git pull origin main --rebase
+6. Push your changes to the main branch:
    git push -u origin main
-6. Once pushed, the GitHub Actions workflow (defined at .github/workflows/deploy.yml) will build your project and deploy its output to the gh-pages branch.
-7. In your GitHub repository, navigate to Settings > Pages and ensure the source is set to the gh-pages branch.
-8. Your site will be available at:
+7. Once pushed, the GitHub Actions workflow (defined at .github/workflows/deploy.yml) will build your project and deploy its output to the gh-pages branch.
+8. In your GitHub repository, navigate to Settings > Pages and ensure the source is set to the gh-pages branch.
+9. Your site will be available at:
    https://<your-github-username>.github.io/<repository-name>/
