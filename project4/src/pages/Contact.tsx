@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, MapPin } from 'lucide-react';
+import { Phone, MapPin } from 'lucide-react'; // removed Mail since we'll use an image for Gmail
 
 export default function Contact() {
   return (
@@ -14,17 +14,31 @@ export default function Contact() {
             <div>
               <h2 className="text-2xl font-semibold mb-4">Nos Coordonnées</h2>
               <div className="space-y-4">
+                {/* Phone number updated */}
                 <div className="flex items-center space-x-3">
                   <Phone className="h-6 w-6 text-red-600" />
-                  <span className="text-lg">+33 1 23 45 67 89</span>
+                  <span className="text-lg">+212668088058</span>
                 </div>
+                {/* Gmail contact using gmail.png icon */}
                 <div className="flex items-center space-x-3">
-                  <Mail className="h-6 w-6 text-red-600" />
-                  <span className="text-lg">contact@wepack.fr</span>
+                  <img src="/gmail.png" alt="Gmail" className="h-6 w-6" />
+                  <span className="text-lg">wepack.ma@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-6 w-6 text-red-600" />
-                  <span className="text-lg">123 Rue de l'Innovation, Paris</span>
+                  <span className="text-lg">Avenue Bir anzaran lot Karima No 5. 24000 EL Jadida</span>
+                </div>
+                {/* New WhatsApp contact row */}
+                <div className="flex items-center space-x-3">
+                  <img src="/wtsp.jpg" alt="WhatsApp" className="h-6 w-6" />
+                  <a 
+                    href="https://wa.me/212668088058" 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="text-lg hover:underline"
+                  >
+                    +212668088058
+                  </a>
                 </div>
               </div>
             </div>
